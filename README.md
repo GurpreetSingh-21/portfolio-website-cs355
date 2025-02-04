@@ -18,6 +18,6 @@ You can view my portfolio live at:
 Feel free to suggest improvements by opening an Issue or a Pull Request.<br/><br/>
 
 
-🚀 Developed by Gurpreet Singh
-💻 Made with HTML, CSS, JavaScript
+🚀 Developed by Gurpreet Singh<br/>
+💻 Made with HTML, CSS, JavaScript<br/>
 📅 Last Updated: February 2025
