@@ -4,7 +4,7 @@ Welcome to my **personal portfolio website**! 🚀 This is where I showcase my p
 
 ## 🔗 Live Demo
 You can view my portfolio live at:  
-👉 
+👉 coming soon.....
 
 
 ## 🚀 Features
@@ -13,6 +13,7 @@ You can view my portfolio live at:
 ✅ **Profile Picture** – Displays my picture next to my bio.  
 ✅ **Resume Download** – Clickable button to download my latest resume.  
 ✅ **Social Links** – Links to my LinkedIn, GitHub, and Email.  
+✅ **Dynamic Tabs** – Work & Education section with interactive buttons.
 
 ## 📢 Contributing
 Feel free to suggest improvements by opening an Issue or a Pull Request.<br/><br/>
@@ -20,4 +21,4 @@ Feel free to suggest improvements by opening an Issue or a Pull Request.<br/><br
 
 🚀 Developed by Gurpreet Singh<br/>
 💻 Made with HTML, CSS, JavaScript<br/>
-📅 Last Updated: February 4th, 2025
+📅 Last Updated: February 5th, 2025
