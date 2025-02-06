@@ -35,6 +35,12 @@ body {
   padding: 33px 0;
 }
 
+.navigation a{
+  list-style: none;
+  text-decoration: none;
+  color: hsl(217.9 10.6% 64.9%);
+}
+
 .navigation ul {
   list-style: none;
   display: flex;
@@ -45,7 +51,7 @@ body {
   font-size: 1rem;
 }
 
-.navigation li:hover {
+.navigation a:hover {
   color: white;
 }
 
@@ -208,7 +214,7 @@ body {
   background-color: hsl(215, 27.9%, 16.9%);
   border-radius: 10px;
   padding: 4px;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
 .tab-button {
@@ -234,4 +240,135 @@ body {
 .tab-button:not(.active):hover {
   background-color: hsla(214, 27%, 20%, 0);
   color: hsl(210, 20%, 98%);
+}
+
+.wok-exp {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(224, 65%, 4.1%);
+  border: 1px solid rgba(59, 131, 246, 0.233);
+  border-radius: 9px;
+  padding: 15px;
+  width: 98%;
+  max-width: 800px;
+  margin: 0px;
+}
+
+.wok-exp > div {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+}
+
+
+.wok-exp h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin:0px;
+}
+
+.wok-exp ul {
+  padding-left: 20px;
+  list-style-type: disc;
+line-height: 1.6;
+}
+.wok-exp li {
+  color: #cfcfcfe3;
+  font-size: 14px;
+}
+.hidden {
+  display: none; 
+}
+
+
+
+#education-section {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(224, 65%, 4.1%);
+  border: 1px solid rgba(59, 131, 246, 0.233);
+  border-radius: 9px;
+  padding: 20px;
+  width: 95%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.edu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  padding-left: 40px; 
+}
+
+.edu-list::before {
+  content: "";
+  position: absolute;
+  left: 44px;  
+  height: calc(112%); 
+  bottom: -6%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.082);
+}
+
+
+.edu-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; 
+  padding: 20px 0;
+  position: relative;
+}
+.edu-logo {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.edu-logo img {
+  width: 85%;
+  height: 90%;
+  object-fit:contain;
+}
+
+.edu-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.edu-date {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.edu-details h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin: 2px 0;
+}
+.edu-details p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 4px 0;
+}
+
+.edu-details ul {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  list-style: disc;
+  padding-left: 15px;
+}
+
+.hidden {
+  display: none !important;
 }

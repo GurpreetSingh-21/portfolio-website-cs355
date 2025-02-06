@@ -1,0 +1,8 @@
+body {
+              font-family: var(--font-sans);
+              color: white;
+              background-color: hsl(224 71.4% 4.1%);
+              margin: 0;
+              padding: 0;
+
+            }
