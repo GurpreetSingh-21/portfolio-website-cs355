@@ -3,6 +3,10 @@
   --font-serif: "Calistoga", serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-sans);
   color: white;
@@ -10,11 +14,12 @@ body {
   margin: 0;
   padding: 0;
 
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px
+    ),
     linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
-
 }
 
 .container {
@@ -35,7 +40,7 @@ body {
   padding: 33px 0;
 }
 
-.navigation a{
+.navigation a {
   list-style: none;
   text-decoration: none;
   color: hsl(217.9 10.6% 64.9%);
@@ -65,7 +70,7 @@ body {
 }
 
 .intro-text h1 {
-  color: rgba(255, 255, 255, 0.900);
+  color: rgba(255, 255, 255, 0.9);
   font-family: var(--font-sans);
   font-size: 2.2rem;
   font-weight: 90px;
@@ -73,7 +78,7 @@ body {
 }
 
 .intro-text h3 {
-  color: rgba(255, 255, 255, 0.850);
+  color: rgba(255, 255, 255, 0.85);
   font-family: var(--font-sans);
   font-size: 0.98rem;
   font-weight: 100px;
@@ -98,7 +103,6 @@ body {
   border-radius: inherit;
 }
 
-
 @media (max-width: 768px) {
   .Intro {
     grid-template-columns: 1fr;
@@ -110,8 +114,6 @@ body {
     justify-content: center;
   }
 }
-
-
 
 .resume {
   display: grid;
@@ -256,32 +258,30 @@ body {
 
 .wok-exp > div {
   display: flex;
-  flex-direction: column; 
-  align-items: flex-start; 
+  flex-direction: column;
+  align-items: flex-start;
 }
-
 
 .wok-exp h3 {
   font-size: 18px;
   font-weight: 600;
   color: white;
-  margin:0px;
+  margin: 0px;
 }
 
 .wok-exp ul {
   padding-left: 20px;
   list-style-type: disc;
-line-height: 1.6;
+  line-height: 1.6;
 }
 .wok-exp li {
   color: #cfcfcfe3;
   font-size: 14px;
+  list-style: none;
 }
 .hidden {
-  display: none; 
+  display: none;
 }
-
-
 
 #education-section {
   display: flex;
@@ -301,24 +301,23 @@ line-height: 1.6;
   padding: 0;
   list-style: none;
   position: relative;
-  padding-left: 40px; 
+  padding-left: 40px;
 }
 
 .edu-list::before {
   content: "";
   position: absolute;
-  left: 44px;  
-  height: calc(112%); 
+  left: 44px;
+  height: calc(112%);
   bottom: -6%;
   width: 1px;
   background-color: rgba(255, 255, 255, 0.082);
 }
 
-
 .edu-entry {
   display: flex;
   align-items: flex-start;
-  gap: 20px; 
+  gap: 20px;
   padding: 20px 0;
   position: relative;
 }
@@ -337,7 +336,7 @@ line-height: 1.6;
 .edu-logo img {
   width: 85%;
   height: 90%;
-  object-fit:contain;
+  object-fit: contain;
 }
 
 .edu-details {
@@ -348,12 +347,12 @@ line-height: 1.6;
 
 .edu-date {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff80;
 }
 .edu-details h3 {
   font-size: 16px;
   font-weight: 600;
-  color: white;
+  color: #ffffff;
   margin: 2px 0;
 }
 .edu-details p {
@@ -372,3 +371,83 @@ line-height: 1.6;
 .hidden {
   display: none !important;
 }
+
+.featured-proj {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.featured-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 797px;
+}
+
+.featured-heading h2 {
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.featured-heading a {
+  text-decoration: none;
+  color: #ffffff80;
+}
+
+.featued-proj-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  width: 797px;
+  background-color: hsla(215, 81%, 32%, 0.199);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px auto;
+  align-items: stretch;
+}
+
+.project-1-show,
+.project-2-show,
+.project-3-show,
+.project-4-show {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(224, 65%, 4.1%);
+  border: 1px solid rgba(59, 131, 246, 0.233);
+  border-radius: 9px;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.project-1-show img,
+.project-2-show img,
+.project-3-show img,
+.project-4-show img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.project-1-show p,
+.project-2-show p,
+.project-3-show p,
+.project-4-show p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  flex-grow: 1;
+}
+
+.project-1-show h6,
+.project-2-show h6,
+.project-3-show h6,
+.project-4-show h6{
+
+
+}
+
