@@ -1,8 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Calistoga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Merriweather:wght@300;700&family=Lato:wght@400;900&display=swap");
+
+:root {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Calistoga", serif;
+  --font-body: "Roboto", sans-serif;
+  --font-heading: "Merriweather", serif;
+  --font-secondary: "Lato", sans-serif;
+}
+
 body {
-              font-family: var(--font-sans);
-              color: white;
-              background-color: hsl(224 71.4% 4.1%);
-              margin: 0;
-              padding: 0;
-            
-            }
+  font-family: var(--font-body);
+  color: white;
+  background-color: hsl(224 71.4% 4.1%);
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+  display: flex;
+  color: hsl(217.9 10.6% 64.9%);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 33px 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: hsl(217.9 10.6% 64.9%);
+  font-family: var(--font-secondary);
+  font-weight: 400;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+}
+
+.navigation a:hover {
+  color: white;
+}
+
+.contact-section {
+  max-width: 800px;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+.contact-heading {
+  text-align: center;
+}
+
+.contact-heading h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-align: start;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  width: 100%;
+  margin-bottom: 25px;
+  max-width: 780px;
+}
+
+@media (min-width: 640px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .textarea-box {
+    grid-column: span 2;
+  }
+}
+
+.input-box input,
+.textarea-box textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid rgb(138, 148, 166, 0.5);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  background-color: hsl(224 71.4% 3.7%);
+  color: white;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  font-family: var(--font-sans);
+}
+
+.input-box input::placeholder,
+.textarea-box textarea::placeholder {
+  color: hsl(217.9, 11.6%, 65.9%);
+  opacity: 1;
+}
+
+.input-box input:focus,
+.textarea-box textarea:focus {
+  border-color: white;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+.textarea-box textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  max-width: none;
+  background-color: hsl(0, 0%, 87%);
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.3s;
+  font-family: var(--font-sans);
+  margin-top: 30px;
+}
+
+@media (min-width: 640px) {
+  .send-button {
+    grid-column: span 2;
+  }
+}
+
+.send-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 270px auto 50px auto;
+  padding: 15px 0;
+  background-color: hsl(224, 71.4%, 4.1%);
+}
+
+footer {
+  text-align: right;
+  color: hsl(217.9, 10.6%, 64.9%);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+}
+
+.social-button svg {
+  width: 25px;
+  height: 25px;
+}
+
+.linkedin:hover {
+  color: #039ad6;
+}
+
+.github:hover {
+  color: #039ad6;
+}

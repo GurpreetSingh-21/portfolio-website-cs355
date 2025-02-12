@@ -1,8 +1,197 @@
-body {
-              font-family: var(--font-sans);
-              color: white;
-              background-color: hsl(224 71.4% 4.1%);
-              margin: 0;
-              padding: 0;
+:root {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Calistoga", serif;
+}
 
-            }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: white;
+  background-color: hsl(224 71.4% 4.1%);
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+  display: flex;
+  color: hsl(217.9 10.6% 64.9%);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 33px 0;
+}
+
+.navigation a {
+  list-style: none;
+  text-decoration: none;
+  color: hsl(217.9 10.6% 64.9%);
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.navigation a:hover {
+  color: white;
+}
+
+.featured-heading {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  padding-left: 10px;
+}
+
+.featured-heading h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.featured-proj {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.featued-proj-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  width: 797px;
+  background-color: hsla(223, 14%, 20%, 0.199);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px auto;
+  align-items: stretch;
+}
+
+.project-1-show,
+.project-2-show,
+.project-3-show,
+.project-4-show,
+.project-5-show {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(224, 65%, 4.1%);
+  border: 1px solid rgba(59, 131, 246, 0.233);
+  border-radius: 9px;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.project-1-show img,
+.project-2-show img,
+.project-3-show img,
+.project-4-show img,
+.project-5-show img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.project-1-show p,
+.project-2-show p,
+.project-3-show p,
+.project-4-show p,
+.project-5-show p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  flex-grow: 1;
+}
+
+.project-1-show h6,
+.project-2-show h6,
+.project-3-show h6,
+.project-4-show h6,
+.project-5-show h6 {
+  border: #0a66c2;
+}
+
+.github-link {
+  margin-top: 15px;
+}
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.github-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.github-button:hover {
+  background-color: #555c66;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 80px auto 120px auto;
+  padding: 15px 0;
+}
+
+footer {
+  text-align: left;
+  color: hsl(217.9, 10.6%, 64.9%);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+}
+
+.social-button svg {
+  width: 25px;
+  height: 25px;
+}
+
+.linkedin:hover {
+  color: #039ad6;
+}
+
+.github:hover {
+  color: #039ad6;
+}

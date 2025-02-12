@@ -13,13 +13,6 @@ body {
   background-color: hsl(224 71.4% 4.1%);
   margin: 0;
   padding: 0;
-
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.1) 1px,
-      transparent 1px
-    ),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
 }
 
 .container {
@@ -400,7 +393,7 @@ body {
   grid-template-rows: repeat(2, auto);
   gap: 10px;
   width: 797px;
-  background-color: hsla(215, 81%, 32%, 0.199);
+  background-color: hsla(0, 0%, 53%, 0.082);
   border-radius: 10px;
   padding: 10px;
   margin: 10px auto;
@@ -414,7 +407,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: hsl(224, 65%, 4.1%);
-  border: 1px solid rgba(59, 131, 246, 0.233);
+  border: 1px solid rgba(9, 94, 231, 0.356);
   border-radius: 9px;
   padding: 20px;
   width: 100%;
@@ -448,6 +441,6 @@ body {
 .project-3-show h6,
 .project-4-show h6{
 
-
+border: #0a66c2;
 }
 
