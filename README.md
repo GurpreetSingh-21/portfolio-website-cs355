@@ -21,4 +21,4 @@ Feel free to suggest improvements by opening an Issue or a Pull Request.<br/><br
 
 🚀 Developed by Gurpreet Singh<br/>
 💻 Made with HTML, CSS, JavaScript<br/>
-📅 Last Updated: February 9th, 2025
+📅 Last Updated: February 12th, 2025
