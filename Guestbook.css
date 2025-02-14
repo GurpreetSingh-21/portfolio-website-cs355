@@ -1,0 +1,255 @@
+:root {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Calistoga", serif;
+  --max-width: 800px;
+  --container-padding: 32px;
+  --section-spacing: 64px;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: white;
+  background-color: hsl(224 71.4% 4.1%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation {
+  display: flex;
+  color: hsl(217.9 10.6% 64.9%);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 33px 0;
+}
+
+.navigation a {
+  list-style: none;
+  text-decoration: none;
+  color: hsl(217.9 10.6% 64.9%);
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.navigation a:hover {
+  color: white;
+}
+
+.guestbook-header,
+.guestbook-container,
+.footer-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center; 
+}
+
+.guestbook-header {
+  margin-bottom: 20px;
+}
+
+.guestbook-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.guestbook-header p {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+
+.guestbook-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 18px;
+  background: hsl(224 71.4% 4.1%);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  position: sticky;
+  top: 32px;
+  align-self: start;
+}
+
+.message-form input,
+.message-form textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid hsl(217.9, 10.6%, 40%);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: hsla(224, 72%, 14%, 0);
+  color: white;
+  box-sizing: border-box;
+}
+
+.message-form textarea {
+  min-height: 140px;
+  resize: vertical;
+  line-height: 1.5;
+
+}
+.guestbook-container .message-form input[type="text"],
+.guestbook-container .message-form textarea {
+  font-weight: 600;
+  color:hsl(217.9 10.6% 64.9%) ;
+}
+
+
+.message-form button {
+  padding: 16px;
+  background-color: hsl(14, 90%, 55%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.message-form button:hover {
+  background-color: hsl(14, 90%, 45%);
+}
+
+.pinboard {
+  background: url("https://www.transparenttextures.com/patterns/cork-board.png");
+  min-height: 600px;
+  height: auto;
+  border-radius: 12px;
+  border: 5px solid hsl(30, 50%, 30%);
+  padding: 32px;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 500px;
+}
+
+.note {
+  position: absolute;
+  width: 180px;
+  min-height: 140px;
+  background: hsl(50, 100%, 90%);
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+  z-index: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.note:active {
+  cursor: grabbing;
+}
+
+.note::before {
+  content: "📌";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+}
+
+.footer-container {
+  margin-top: auto;
+  padding-top: var(--section-spacing);
+  padding-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container footer {
+  color: hsl(217.9, 10.6%, 64.9%);
+  font-size: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 32px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 8px;
+}
+
+.social-button svg {
+  width: 28px;
+  height: 28px;
+}
+
+.linkedin:hover,
+.github:hover {
+  color: #039ad6;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 24px;
+    --section-spacing: 48px;
+  }
+
+  .guestbook-container {
+    grid-template-columns: 1fr;
+  }
+
+  .message-form {
+    width: 100%;
+    position: static;
+  }
+
+  .navigation ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .guestbook-header h1 {
+    font-size: 2rem;
+  }
+}
