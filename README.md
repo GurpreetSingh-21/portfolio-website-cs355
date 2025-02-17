@@ -4,7 +4,7 @@ Welcome to my **personal portfolio website**! 🚀 This is where I showcase my p
 
 ## 🔗 Live Demo
 You can view my portfolio live at:  
-👉 coming soon.....
+👉 coming soon......
 
 
 ## 🚀 Features
