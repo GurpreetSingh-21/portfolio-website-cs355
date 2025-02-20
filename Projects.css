@@ -52,7 +52,6 @@ body {
   width: 100%;
   max-width: 800px;
   margin: 0 auto 20px auto;
-  padding-left: 10px;
 }
 
 .featured-heading h2 {
@@ -194,4 +193,56 @@ footer {
 
 .github:hover {
   color: #039ad6;
+}
+
+/* for navbar */
+@media (max-width: 640px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* for footer  */
+@media (max-width: 640px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin: 50px auto 80px auto;
+  }
+}
+
+/*  for featured projects */
+@media (max-width: 768px) {
+  .featured-heading {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    max-width: 90%;
+    margin: 0 auto;
+    gap: 10px;
+    margin-left: 6%;
+  }
+
+  .featued-proj-container {
+    grid-template-columns: 1fr; 
+    width: 90%; 
+    max-width: 100%;
+    padding: 8px;
+    margin: 10px auto;
+    gap: 1.9rem;
+  }
+
+  .project-1-show,
+  .project-2-show,
+  .project-3-show,
+  .project-4-show,
+  .project-5-show {
+    padding: 15px;
+    width: 100%;
+    max-width: 100%;
+  }
 }
