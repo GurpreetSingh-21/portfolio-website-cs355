@@ -6,43 +6,46 @@
   --section-spacing: 64px;
 }
 
-
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-family: var(--font-sans);
   color: white;
-  background-color: hsl(224 71.4% 4.1%);
+  background-color: hsl(224, 71.4%, 4.1%);
   margin: 0;
   padding: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 .navigation {
   display: flex;
-  color: hsl(217.9 10.6% 64.9%);
+  flex-wrap: wrap;
+  color: hsl(217.9, 10.6%, 64.9%);
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 33px 0;
+  padding: 24px;
 }
 
 .navigation a {
-  list-style: none;
   text-decoration: none;
-  color: hsl(217.9 10.6% 64.9%);
+  color: hsl(217.9, 10.6%, 64.9%);
 }
 
 .navigation ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   padding: 0;
   margin: 0;
   font-weight: 500;
@@ -58,10 +61,9 @@ body {
 .footer-container {
   width: 100%;
   max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 10px;
+  padding: var(--container-padding);
   box-sizing: border-box;
-  text-align: center; 
+  text-align: center;
 }
 
 .guestbook-header {
@@ -69,21 +71,22 @@ body {
 }
 
 .guestbook-header h1 {
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: bold;
 }
 
 .guestbook-header p {
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
 }
 
-
 .guestbook-container {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: start;
   margin-top: 20px;
 }
 
@@ -92,13 +95,13 @@ body {
   flex-direction: column;
   gap: 15px;
   padding: 18px;
-  background: hsl(224 71.4% 4.1%);
+  background: hsl(224, 71.4%, 4.1%);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   width: 100%;
-  position: sticky;
-  top: 32px;
-  align-self: start;
+  max-width: 350px;
+  align-self: center; 
+  margin: 0 auto; 
 }
 
 .message-form input,
@@ -117,14 +120,13 @@ body {
   min-height: 140px;
   resize: vertical;
   line-height: 1.5;
-
 }
+
 .guestbook-container .message-form input[type="text"],
 .guestbook-container .message-form textarea {
   font-weight: 600;
-  color:hsl(217.9 10.6% 64.9%) ;
+  color: hsl(217.9, 10.6%, 64.9%);
 }
-
 
 .message-form button {
   padding: 16px;
@@ -144,15 +146,16 @@ body {
 
 .pinboard {
   background: url("https://www.transparenttextures.com/patterns/cork-board.png");
-  min-height: 600px;
-  height: auto;
-  border-radius: 12px;
+  min-height: 500px;
+  border-radius: 10px;
   border: 5px solid hsl(30, 50%, 30%);
-  padding: 32px;
-  position: relative;
+  padding: 30px;
   box-sizing: border-box;
-  width: 100%;
-  min-width: 500px;
+  width: min(96%, 420px); 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 0 auto 0 5%; 
 }
 
 .note {
@@ -167,7 +170,6 @@ body {
   cursor: grab;
   z-index: 1;
   word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 .note:active {
@@ -183,13 +185,15 @@ body {
   font-size: 28px;
 }
 
+/* Footer */
 .footer-container {
   margin-top: auto;
-  padding-top: var(--section-spacing);
-  padding-bottom: 48px;
+  padding: var(--section-spacing) 0;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .footer-container footer {
@@ -199,7 +203,8 @@ body {
 
 .social-links {
   display: flex;
-  gap: 32px;
+  gap: 16px;
+  justify-content: center;
 }
 
 .social-button {
@@ -222,36 +227,76 @@ body {
   color: #039ad6;
 }
 
+/* =========== RESPONSIVE STYLES =========== */
+
 @media (max-width: 768px) {
-  :root {
-    --container-padding: 24px;
-    --section-spacing: 48px;
-  }
-
-  .guestbook-container {
-    grid-template-columns: 1fr;
-  }
-
-  .message-form {
+  body {
     width: 100%;
-    position: static;
+    height: 100%;
+    overflow-x: hidden !important; 
+    overflow-y: auto !important; 
+    scroll-behavior: smooth;
+    position: relative;
   }
 
-  .guestbook-header h1 {
-    font-size: 2rem;
-  }
-}
-
-/* for navbar */
-@media (max-width: 640px) {
   .navigation {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    width: 100%;
+    max-width: 100%; 
+    padding: 12px 13px;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+
+  .navigation a {
+    font-size: 15px;
+    font-family: var(--font-sans);
+    font-weight: 500;
+  }
+
+  .navigation ul {
+    gap: 19px;
+    padding-left: 0; 
+  }
+  
+  .guestbook-header {
+    text-align: left;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+  }
+  
+  .guestbook-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 12px 20px;
+    align-items: flex-start;
+  }
+  
+  .message-form {
+    max-width: 100%;
+    margin: 0;
+    padding: 15px;
+  }
+  
+  .pinboard {
+    width: 100%;
+    min-height: 400px;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .note {
+    width: 150px;
+    min-height: 120px;
+    padding: 15px;
   }
 }
 
-/* for footer  */
 @media (max-width: 640px) {
   .footer-container {
     flex-direction: column;
@@ -259,5 +304,6 @@ body {
     text-align: center;
     gap: 20px;
     margin: 50px auto 80px auto;
+    padding: 15px 20px; 
   }
 }
