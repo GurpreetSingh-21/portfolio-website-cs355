@@ -40,7 +40,7 @@ function addMessage() {
 }
 
 function calculateNotePosition(index, pinboardRect) {
-  const noteWidth = 200;
+  const noteWidth = 180;
   const noteHeight = 140;
   const padding = 32;
 
@@ -149,6 +149,7 @@ function dragNote(event, note) {
   note.ondragstart = function () {
     return false;
   };
+}
 
   function calculateNotePosition(index, pinboardRect) {
     const noteWidth = 180;
@@ -198,4 +199,3 @@ function dragNote(event, note) {
 
     pinboard.style.height = `${Math.max(500, requiredHeight)}px`;
   }
-}

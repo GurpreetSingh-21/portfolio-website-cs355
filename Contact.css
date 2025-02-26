@@ -17,16 +17,27 @@ body {
   overflow-x: hidden;
 }
 
+.container {
+  width: 50%;
+  max-width: 800px;
+  padding: 0 var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+
 .navigation {
   display: flex;
-  color: hsl(217.9 10.6% 64.9%);
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  justify-content: flex-start;
+  width: 100%; 
+  max-width: var(--max-width); 
   padding: 33px 0;
 }
+
 
 .navigation a {
   list-style: none;
