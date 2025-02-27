@@ -1,14 +1,14 @@
 :root {
   --font-sans: "Inter", sans-serif;
   --font-serif: "Calistoga", serif;
+  --container-padding: 30px;
   --max-width: 800px;
-  --container-padding: 32px;
-  --section-spacing: 64px;
 }
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -20,39 +20,38 @@ body {
   width: 100%;
   overflow-x: hidden;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .container {
-  width: 50%; 
-  max-width: 800px; 
+  width: 100%;
+  max-width: 800px;
   padding: 0 var(--container-padding);
+  margin: 0 auto;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
-  justify-content: flex-start;
+  align-items: center;
 }
 
 
+.wrapper {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .navigation {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 100%; 
-  max-width: var(--max-width); 
-  padding: 33px 0;
-  margin: 0 auto; 
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 33px var(--container-padding);
+  box-sizing: border-box;
 }
-
-
-
-.navigation a {
-  list-style: none;
-  text-decoration: none;
-  color: hsl(217.9 10.6% 64.9%);
-}
-
 .navigation ul {
   list-style: none;
   display: flex;
@@ -63,61 +62,76 @@ body {
   font-size: 1rem;
 }
 
+
+.navigation a {
+  text-decoration: none;
+  color: hsl(217.9 10.6% 64.9%);
+}
+
 .navigation a:hover {
   color: white;
 }
 
 .guestbook-header,
-.guestbook-container,
-.footer-container {
+.guestbook-container {
   width: 100%;
   max-width: var(--max-width);
-  padding: var(--container-padding);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
   box-sizing: border-box;
-  text-align: left;
-  margin: 0 auto; 
+  text-align: center;
 }
 
 .guestbook-header {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto 30px auto;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 .guestbook-header h1 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-weight: bold;
+  font-size: 2rem;
+  margin: 0 auto 10px auto;
+}
+.guestbook-header p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 20px;
 }
 
-.guestbook-header p {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
-}
 
 .guestbook-container {
-  display: flex; 
-  flex-direction: column;
-  align-items: center; 
-  gap: 30px;
-  margin: 20px auto;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .message-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 18px;
+  align-items: center;
+  gap: 25px;
+  padding: 38px var(--container-padding);
   background: hsl(224, 71.4%, 4.1%);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   width: 100%;
-  max-width: 600px;
-  align-self: center; 
-  margin: 0 auto; 
+  max-width: var(--max-width);
+  margin: 0 auto;
+  box-sizing: border-box;
 }
+
 
 .message-form input,
 .message-form textarea {
   width: 100%;
+  max-width: 600px;
   padding: 16px;
   border: 1px solid hsl(217.9, 10.6%, 40%);
   border-radius: 8px;
@@ -127,19 +141,15 @@ body {
   box-sizing: border-box;
 }
 
+
 .message-form textarea {
   min-height: 140px;
   resize: vertical;
   line-height: 1.5;
 }
 
-.guestbook-container .message-form input[type="text"],
-.guestbook-container .message-form textarea {
-  font-weight: 600;
-  color: hsl(217.9, 10.6%, 64.9%);
-}
-
 .message-form button {
+  width: 88%;
   padding: 16px;
   background-color: hsl(14, 90%, 55%);
   color: white;
@@ -158,17 +168,16 @@ body {
 .pinboard {
   background: url("https://www.transparenttextures.com/patterns/cork-board.png");
   min-height: 500px;
-  border-radius: 10px;
-  border: 5px solid hsl(30, 50%, 30%);
   padding: 30px;
-  box-sizing: border-box;
+  border: 5px solid hsl(30, 50%, 30%);
   width: 100%;
   max-width: 600px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center; 
-  margin: 0 auto; 
-  position: relative; 
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .note {
@@ -198,27 +207,27 @@ body {
   font-size: 25px;
 }
 
-/* Footer */
 .footer-container {
-  margin-top: auto;
-  padding: var(--section-spacing) var(--container-padding);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 80px auto 120px auto;
+  padding: 15px var(--container-padding);
+  box-sizing: border-box;
+}
+footer {
+  text-align: left;
+  color: hsl(217.9, 10.6%, 64.9%);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+}
+.social-links {
+  display: flex;
   gap: 20px;
 }
 
-.footer-container footer {
-  color: hsl(217.9, 10.6%, 64.9%);
-  font-size: 1rem;
-}
-
-.social-links {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-}
 
 .social-button {
   display: flex;
@@ -240,158 +249,130 @@ body {
   color: #039ad6;
 }
 
-/* =========== RESPONSIVE STYLES =========== */
 
-/* ✅ Large Screens: 1441px and Above (Includes 32-inch Monitors) */
-@media (min-width: 1441px) {
-  :root {
-    --container-padding: 40px;
+
+/* ✅ Final Fixes for Responsive Layout */
+@media (max-width: 1023px) {
+  .guestbook-header h1 {
+    font-size: 2.4rem;
+  }
+
+  .message-form {
+    padding: 30px;
   }
 
   .pinboard {
-    min-height: 600px;
-  }
-}
-
-/* ✅ Large Laptops & Desktops: 1280px - 1440px */
-@media (max-width: 1440px) and (min-width: 1280px) {
-  :root {
-    --container-padding: 30px;
+    max-width: 500px;
   }
 
-  .navigation {
-    padding: 35px var(--container-padding);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .navigation ul {
-    gap: 27px;
-  }
-
-  .navigation a {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 1024px) and (min-width: 769px) {
-  :root {
-    --container-padding: 24px;
-    --section-spacing: 48px;
-  }
-
-  .navigation {
-    padding: 24px var(--container-padding);
-  }
-
-  .pinboard {
-    min-height: 450px;
-    padding: 25px;
+  .footer-container {
+    margin: 70px auto 100px auto;
   }
 }
 
 @media (max-width: 768px) {
-  body {
-    width: 100%;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    scroll-behavior: smooth;
-  }
-
-  .container {
-    width: 90%;
-  }
-
   .navigation {
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 30px 15px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px var(--container-padding);
+    
   }
 
   .navigation ul {
+    gap: 20px;
     flex-direction: row;
-    gap: 30px;
+    justify-content: center;
+    
   }
 
-  .navigation a {
-    font-size: 15px;
+  .guestbook-header h1 {
+    font-size: 2.2rem;
   }
-
-  .guestbook-header,
-  .guestbook-container {
-    padding: 12px 20px;
-  }
-
-  .pinboard {
-    min-height: 400px;
-    padding: 20px;
-    max-width: 100%;
-  }
-
-  .note {
-    width: 150px;
-    min-height: 120px;
-    padding: 15px;
-  }
-}
-
-/* ✅ Small Mobile Screens: 375px - 640px (iPhones & Small Devices) */
-@media (max-width: 640px) {
-
 
   .message-form {
-    max-width: 100%;
-    margin: 0;
-    padding: 15px;
-  }
-
-  .message-form input,
-  .message-form textarea {
-    padding: 12px;
-  }
-
-  .message-form button {
-    padding: 14px;
+    padding: 25px;
   }
 
   .pinboard {
-    min-height: 350px;
-    padding: 15px;
-    border-width: 4px;
-  }
-
-  .note {
-    width: 130px;
-    min-height: 100px;
-    padding: 12px;
-    font-size: 0.9rem;
+    max-width: 400px;
   }
 
   .footer-container {
+    margin: 60px auto 80px auto;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     gap: 20px;
-    margin: 50px auto 80px auto;
-    padding: 15px 20px;
+  }
+
+  footer {
+    text-align: center;
   }
 }
 
-@media (max-width: 375px) {
-  .navigation ul {
-    gap: 14px;
-    font-size: 0.9rem;
+@media (max-width: 480px) {
+  .navigation {
+    justify-content: center;
+    padding: 24px var(--container-padding);
   }
 
-  .note {
-    width: 120px;
-    min-height: 90px;
-    padding: 10px;
-    font-size: 0.85rem;
+  .navigation ul {
+    gap: 15px;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+  .guestbook-header h1 {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .guestbook-container {
+    gap: 20px;
   }
 
   .message-form {
-    padding: 12px;
+    padding: 20px;
+  }
+
+  .pinboard {
+    max-width: 350px;
+  }
+
+  .footer-container {
+    margin: 50px auto 70px auto;
+  }
+
+  .social-links {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 390px) {
+
+  .navigation {
+    justify-content: center;
+    padding: 24px var(--container-padding);
+  }
+
+  .navigation ul {
+    gap: 15px;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  .guestbook-header h1 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .message-form {
+    padding: 18px;
+  }
+
+  .pinboard {
+    max-width: 320px;
+  }
+
+  .footer-container {
+    margin: 40px auto 60px auto;
   }
 }
