@@ -31,9 +31,8 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; 
 }
-
 
 .wrapper {
   width: 100%;
@@ -52,6 +51,7 @@ body {
   padding: 33px var(--container-padding);
   box-sizing: border-box;
 }
+
 .navigation ul {
   list-style: none;
   display: flex;
@@ -61,7 +61,6 @@ body {
   font-weight: 500;
   font-size: 1rem;
 }
-
 
 .navigation a {
   text-decoration: none;
@@ -79,59 +78,69 @@ body {
   margin: 0 auto;
   padding: 0 var(--container-padding);
   box-sizing: border-box;
-  text-align: center;
+  align-items: flex-start; 
+  justify-content: flex-start;
 }
 
 .guestbook-header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto 30px auto;
-  padding: 0;
+  padding: 0 var(--container-padding);
   box-sizing: border-box;
 }
+
 .guestbook-header h1 {
   font-size: 2rem;
-  margin: 0 auto 10px auto;
+  margin: 33px 0 10px 0; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%; 
+  letter-spacing: 3px;
 }
+
 .guestbook-header p {
   color: rgba(255, 255, 255, 0.7);
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  letter-spacing: 2px;
 }
-
 
 .guestbook-container {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0;
+  padding: 0 var(--container-padding); 
   box-sizing: border-box;
-  text-align: center;
+  text-align: left; 
 }
 
 .message-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; 
+  justify-content: flex-start;
   gap: 25px;
-  padding: 38px var(--container-padding);
+  padding: 0;
   background: hsl(224, 71.4%, 4.1%);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-
 .message-form input,
 .message-form textarea {
   width: 100%;
-  max-width: 600px;
+  max-width: 100%; 
   padding: 16px;
   border: 1px solid hsl(217.9, 10.6%, 40%);
   border-radius: 8px;
@@ -141,7 +150,6 @@ body {
   box-sizing: border-box;
 }
 
-
 .message-form textarea {
   min-height: 140px;
   resize: vertical;
@@ -149,7 +157,7 @@ body {
 }
 
 .message-form button {
-  width: 88%;
+  width: 100%; 
   padding: 16px;
   background-color: hsl(14, 90%, 55%);
   color: white;
@@ -171,13 +179,14 @@ body {
   padding: 30px;
   border: 5px solid hsl(30, 50%, 30%);
   width: 100%;
-  max-width: 600px;
+  max-width: var(--max-width); 
   margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start; 
+  align-items: flex-start; 
   box-sizing: border-box;
   position: relative;
+  margin-top: 40px;
 }
 
 .note {
@@ -217,17 +226,18 @@ body {
   padding: 15px var(--container-padding);
   box-sizing: border-box;
 }
+
 footer {
   text-align: left;
   color: hsl(217.9, 10.6%, 64.9%);
   font-family: var(--font-sans);
   font-size: 0.9rem;
 }
+
 .social-links {
   display: flex;
   gap: 20px;
 }
-
 
 .social-button {
   display: flex;
@@ -251,7 +261,11 @@ footer {
 
 
 
-/* ✅ Final Fixes for Responsive Layout */
+
+
+
+
+
 @media (max-width: 1023px) {
   .guestbook-header h1 {
     font-size: 2.4rem;
@@ -262,7 +276,7 @@ footer {
   }
 
   .pinboard {
-    max-width: 500px;
+    max-width: 100%; 
   }
 
   .footer-container {
@@ -275,26 +289,33 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 20px var(--container-padding);
-    
   }
 
   .navigation ul {
     gap: 20px;
     flex-direction: row;
     justify-content: center;
-    
   }
 
   .guestbook-header h1 {
     font-size: 2.2rem;
+    justify-content: flex-start;
+  }
+
+  .guestbook-header,
+  .guestbook-container {
+    align-items: flex-start; 
+    text-align: left;
   }
 
   .message-form {
     padding: 25px;
+    align-items: flex-start; 
   }
 
   .pinboard {
-    max-width: 400px;
+    max-width: 100%;
+    justify-content: flex-start; 
   }
 
   .footer-container {
@@ -319,10 +340,11 @@ footer {
     justify-content: center;
     font-size: 0.9rem;
   }
+  
   .guestbook-header h1 {
     font-size: 1.4rem;
     margin-top: 10px;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .guestbook-container {
@@ -334,7 +356,7 @@ footer {
   }
 
   .pinboard {
-    max-width: 350px;
+    max-width: 100%;
   }
 
   .footer-container {
@@ -347,7 +369,6 @@ footer {
 }
 
 @media (max-width: 390px) {
-
   .navigation {
     justify-content: center;
     padding: 24px var(--container-padding);
@@ -369,7 +390,7 @@ footer {
   }
 
   .pinboard {
-    max-width: 320px;
+    max-width: 100%; 
   }
 
   .footer-container {

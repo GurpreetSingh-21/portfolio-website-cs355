@@ -31,13 +31,13 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   width: 100%;
   max-width: var(--max-width);
   padding: 33px var(--container-padding);
@@ -69,10 +69,9 @@ body {
   text-align: left;
   width: 100%;
   max-width: var(--max-width);
-  padding-left: 0; 
+  padding-left: 0;
   box-sizing: border-box;
 }
-
 
 .featured-heading h2 {
   margin: 0;
@@ -90,7 +89,7 @@ body {
 
 .featured-proj-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   width: 100%;
   max-width: var(--max-width);
@@ -106,7 +105,8 @@ body {
 .project-2-show,
 .project-3-show,
 .project-4-show,
-.project-5-show {
+.project-5-show,
+.project-6-show {
   display: flex;
   flex-direction: column;
   background-color: hsl(224, 65%, 4.1%);
@@ -123,7 +123,8 @@ body {
 .project-2-show img,
 .project-3-show img,
 .project-4-show img,
-.project-5-show img {
+.project-5-show img,
+.project-6-show img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -134,8 +135,9 @@ body {
 .project-2-show p,
 .project-3-show p,
 .project-4-show p,
-.project-5-show p {
-  font-size: 12px;
+.project-5-show p,
+.project-6-show p {
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.7);
   flex-grow: 1;
 }
@@ -208,12 +210,10 @@ footer {
   color: #039ad6;
 }
 
-
-
 /*  Media Queries */
 @media (max-width: 1023px) {
   .featured-heading {
-    padding-left: 25px; 
+    padding-left: 25px;
   }
 
   .featured-heading h2 {
@@ -221,7 +221,7 @@ footer {
   }
 
   .featured-proj-container {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     padding: 16px;
   }
 
@@ -236,14 +236,14 @@ footer {
   }
 
   .featured-heading {
-    padding-left: 20px; 
+    padding-left: 20px;
   }
   .featured-heading h2 {
     font-size: 2.2rem;
   }
 
   .featured-proj-container {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     max-width: 600px;
   }
 
@@ -270,15 +270,15 @@ footer {
     font-size: 0.9rem;
   }
   .featured-heading {
-    padding-left: 16px; 
+    padding-left: 16px;
   }
   .featured-heading h2 {
     font-size: 2rem;
-    text-align: left; 
+    text-align: left;
   }
 
   .featured-proj-container {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     padding: 10px;
     gap: 10px;
   }

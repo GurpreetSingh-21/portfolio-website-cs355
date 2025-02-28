@@ -78,7 +78,7 @@ body {
   text-align: left;
   width: 100%;
   max-width: var(--max-width);
-  margin: 20px auto 20px auto;
+  margin: 40px auto 20px auto;
   padding: 0;
   box-sizing: border-box;
 }
@@ -104,7 +104,7 @@ body {
 
 .input-box input,
 .textarea-box textarea {
-  width: 100%;
+  width: 95.7%;
   padding: 14px;
   border: 1px solid rgba(138, 148, 166, 0.5);
   border-radius: 6px;
