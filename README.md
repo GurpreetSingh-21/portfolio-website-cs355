@@ -3,8 +3,7 @@
 Welcome to my **personal portfolio website**! 🚀 This is where I showcase my projects, skills, and experience as a **Software Engineer**.
 
 ## 🔗 Live Demo
-You can view my portfolio live at:  
-👉 coming soon......
+You can view my portfolio live at:  https://gurpreetsingh-portfolio.vercel.app/
 
 
 ## 🚀 Features
