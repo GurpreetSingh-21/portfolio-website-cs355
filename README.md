@@ -14,9 +14,6 @@ You can view my portfolio live at:  https://gurpreetsingh-portfolio.vercel.app/
 ✅ **Social Links** – Links to my LinkedIn, GitHub, and Email.  
 ✅ **Dynamic Tabs** – Work & Education section with interactive buttons.
 
-## 📢 Contributing
-Feel free to suggest improvements by opening an Issue or a Pull Request.<br/><br/>
-
 
 🚀 Developed by Gurpreet Singh<br/>
 💻 Made with HTML, CSS, JavaScript<br/>
